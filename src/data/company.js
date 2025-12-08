@@ -4,7 +4,7 @@ export const company = {
   shortName: "Aspiron",
   description:
     "A leading IT solutions provider specializing in custom software development, web applications, and digital transformation services.",
-  founded: "2020",
+  founded: "2025",
   location: {
     city: "Hyderabad",
     state: "Telangana",
@@ -14,13 +14,14 @@ export const company = {
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160407077!2d78.24323089999999!3d17.412608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHITEC%20City%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1234567890",
   },
   contact: {
-    phone: "+91 98765 43210",
-    email: "info@aspironsoftware.com",
-    support: "support@aspironsoftware.com",
-    careers: "careers@aspironsoftware.com",
+    phone: "+91 63098 06984",
+    email: "info@aspironsoftwaresolutions.com",
+    support: "support@aspironsoftwaresolutions.com",
+    careers: "hr@aspironsoftwaresolutions.com",
   },
   social: {
-    linkedin: "https://linkedin.com/company/aspiron-software",
+    linkedin:
+      "https://www.linkedin.com/company/aspiron-software-solutions-pvt-ltd/?viewAsMember=true",
     twitter: "https://twitter.com/aspironsoftware",
     facebook: "https://facebook.com/aspironsoftware",
     instagram: "https://instagram.com/aspironsoftware",
@@ -58,10 +59,10 @@ export const company = {
     },
   ],
   stats: {
-    experience: "15+",
-    clients: "50+",
-    projects: "100+",
-    team: "30+",
+    experience: "1+",
+    clients: "2+",
+    projects: "3+",
+    team: "5+",
     satisfaction: "98%",
   },
   certifications: [
@@ -88,37 +89,37 @@ export const company = {
   ],
   milestones: [
     {
-      year: "2020",
+      year: "2025",
       title: "Company Founded",
       description:
         "Aspiron Software Solutions established with a vision to transform businesses through technology",
     },
     {
-      year: "2021",
+      year: "2025",
       title: "First Major Client",
       description:
         "Secured first enterprise client and delivered successful CRM implementation",
     },
     {
-      year: "2022",
+      year: "2025",
       title: "Product Launch",
       description:
         "Launched PropertyDealz.in, our flagship real estate platform",
     },
     {
-      year: "2023",
+      year: "2025",
       title: "Team Expansion",
       description: "Grew team to 30+ professionals and opened new office space",
     },
     {
-      year: "2024",
+      year: "2025",
       title: "Industry Recognition",
       description:
         "Recognized as Top IT Services Provider and launched multiple successful projects",
     },
   ],
   workingHours: {
-    weekdays: "Monday - Friday: 9:00 AM - 6:00 PM",
+    weekdays: "Monday - Friday: 10:00 AM - 6:00 PM",
     saturday: "Saturday: 10:00 AM - 2:00 PM",
     sunday: "Sunday: Closed",
   },
