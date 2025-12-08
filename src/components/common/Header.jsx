@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import company from "@data/company";
+import logo from "../../assets/icon.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,6 +29,7 @@ const Header = () => {
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Products", path: "/products" },
+    { name: "Projects", path: "/projects" },
     { name: "Clients", path: "/clients" },
     { name: "Careers", path: "/careers" },
     { name: "Contact", path: "/contact" },
@@ -47,27 +49,34 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-accent to-success rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-bold text-xl">A</span>
+            <div className="w-10 h-10 bg-transparent from-accent to-success rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 ">
+              <img
+                src={logo}
+                alt="Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block "> */}
+            <div>
               <span className="font-heading font-bold text-xl text-primary">
                 {company.shortName}
               </span>
-              <p className="text-xs text-gray-500 -mt-1">Software Solutions</p>
+              <p className="text-xs text-gray-500 ">Software Solutions</p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center space-x-3 p-3 gap:15">
             {navigation.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
                   isActive(item.path)
-                    ? "text-accent bg-accent/10"
-                    : "text-gray-700 hover:text-accent hover:bg-secondary"
+                    ? "text-accent "
+                    : "text-gray-700 hover:text-accent "
+                  // ? "text-accent bg-accent/10"
+                  //   : "text-gray-700 hover:text-accent hover:bg-secondary"
                 }`}
               >
                 {item.name}

@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Container from "../ui/Container";
 import company from "@data/company";
+import logo from "../../assets/icon.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -57,8 +58,12 @@ const Footer = () => {
                 to="/"
                 className="inline-flex items-center space-x-2 group mb-4"
               >
-                <div className="w-10 h-10 bg-gradient-to-br from-accent to-success rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">A</span>
+                <div className="w-10 h-10 bg-transparent from-accent to-success rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 ">
+                  <img
+                    src={logo}
+                    alt="Logo"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <span className="font-heading font-bold text-xl">
                   {company.shortName}

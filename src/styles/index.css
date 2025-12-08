@@ -2,4 +2,125 @@
 @tailwind components;
 @tailwind utilities;
 
-/* your custom styles after this */
+/* ========== CUSTOM STYLES ========== */
+
+/* GLOBAL BASE STYLES */
+body {
+  @apply bg-white text-dark font-body antialiased;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  @apply font-heading font-semibold text-5xl md:text-6xl lg:text-7xl;
+}
+h2 {
+  @apply font-heading font-semibold text-4xl md:text-5xl lg:text-6xl;
+}
+h3 {
+  @apply font-heading font-semibold text-3xl md:text-4xl;
+}
+h4 {
+  @apply font-heading font-semibold text-2xl md:text-3xl;
+}
+h5 {
+  @apply font-heading font-semibold text-xl md:text-2xl;
+}
+h6 {
+  @apply font-heading font-semibold text-lg md:text-xl;
+}
+
+/* BUTTONS */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-success text-white font-medium rounded-md shadow-sm hover:bg-accent transition-all duration-300 hover:shadow-lg hover:scale-105 focus:ring-2 ring-success;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-white text-primary border border-secondary-dark font-medium rounded-md hover:border-accent hover:text-accent transition-all duration-300 focus:ring-2 ring-accent;
+}
+
+/* CARDS */
+.card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-xl p-6 transition-all duration-300;
+}
+
+/* INPUTS */
+.input-field {
+  @apply w-full px-4 py-3 border border-secondary-dark rounded-md focus:ring-2 ring-accent transition-all duration-200;
+}
+
+/* ========== UTILITY CLASSES ========== */
+
+/* Gradient Background - HERO & SECTIONS */
+.gradient-bg {
+  background: linear-gradient(135deg, #0a2540 0%, #0e3254 50%, #2b8ced 100%);
+}
+
+/* Grid Pattern Background */
+.bg-grid-pattern {
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(255, 255, 255, 0.05) 26%,
+      transparent 27%,
+      transparent 74%,
+      rgba(255, 255, 255, 0.05) 75%,
+      rgba(255, 255, 255, 0.05) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(255, 255, 255, 0.05) 26%,
+      transparent 27%,
+      transparent 74%,
+      rgba(255, 255, 255, 0.05) 75%,
+      rgba(255, 255, 255, 0.05) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 50px 50px;
+}
+
+/* Animation Delay Utilities */
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+/* ========== RESPONSIVE UTILITIES ========== */
+
+/* Flexbox & Grid Helpers */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+/* Text Utilities */
+.text-gradient {
+  background: linear-gradient(135deg, #2b8ced, #0a2540);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Shadow Utilities */
+.shadow-accent {
+  box-shadow: 0 10px 30px rgba(43, 140, 237, 0.2);
+}
+
+.shadow-accent-lg {
+  box-shadow: 0 20px 50px rgba(43, 140, 237, 0.3);
+}
