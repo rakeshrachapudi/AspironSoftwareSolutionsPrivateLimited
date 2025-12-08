@@ -24,7 +24,7 @@ const Button = ({
     secondary:
       "bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white focus:ring-primary",
     outline:
-      "bg-white text-primary border border-secondary-dark hover:border-accent hover:text-accent focus:ring-accent",
+      "bg-transparent border border-secondary-dark text-primary hover:border-accent hover:text-accent focus:ring-accent",
     ghost: "bg-transparent text-primary hover:bg-secondary",
     dark: "bg-primary text-white hover:bg-primary-light",
   };

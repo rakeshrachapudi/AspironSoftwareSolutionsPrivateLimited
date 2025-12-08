@@ -96,7 +96,7 @@ export const projects = [
     status: "In Development",
     year: "2024",
     client: "Paarani Fashion Pvt Ltd",
-    url: "#",
+    url: "https://paarani.com",
     featured: true,
     testimonial: {
       text: "Aspiron transformed our vision into reality. The e-commerce platform has exceeded our expectations and significantly boosted our online sales.",
