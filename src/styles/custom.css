@@ -1,0 +1,49 @@
+@reference "tailwindcss";
+
+/* GLOBAL BASE STYLES */
+body {
+  @apply bg-white text-dark font-body antialiased;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  @apply font-heading font-semibold text-5xl md:text-6xl lg:text-7xl;
+}
+h2 {
+  @apply font-heading font-semibold text-4xl md:text-5xl lg:text-6xl;
+}
+h3 {
+  @apply font-heading font-semibold text-3xl md:text-4xl;
+}
+h4 {
+  @apply font-heading font-semibold text-2xl md:text-3xl;
+}
+h5 {
+  @apply font-heading font-semibold text-xl md:text-2xl;
+}
+h6 {
+  @apply font-heading font-semibold text-lg md:text-xl;
+}
+
+/* BUTTONS */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-success text-white font-medium rounded-md 
+  shadow-sm hover:bg-accent transition-all duration-300 hover:shadow-lg hover:scale-105 
+  focus:ring-2 ring-success;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-white text-primary border border-secondary-dark font-medium rounded-md 
+  hover:border-accent hover:text-accent transition-all duration-300 focus:ring-2 ring-accent;
+}
+
+/* CARDS */
+.card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-xl p-6 transition-all duration-300;
+}
+
+/* INPUTS */
+.input-field {
+  @apply w-full px-4 py-3 border border-secondary-dark rounded-md 
+  focus:ring-2 ring-accent transition-all duration-200;
+}
