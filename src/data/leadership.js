@@ -1,25 +1,25 @@
 export const leadership = [
   {
     id: 1,
-    name: "Yadagiri Nomula",
-    role: "Director",
+    name: "Rajesh Kumar",
+    role: "Chief Executive Officer (CEO)",
     designation: "Director",
     bio: "Rajesh brings over 15 years of experience in software development and business strategy. He founded Aspiron with a vision to deliver world-class IT solutions that transform businesses.",
     image:
       "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
     linkedin: "#",
-    email: "yadagiri.nomula@aspironsoftwaresolutions.com",
+    email: "rajesh@aspiron.com",
     expertise: ["Business Strategy", "Digital Transformation", "Leadership"],
     achievements: [
-      "Founded Aspiron Software Solutions in 2025",
-      "Led digital transformation for 5+ enterprises",
+      "Founded Aspiron Software Solutions in 2020",
+      "Led digital transformation for 50+ enterprises",
       "Mentor at startup accelerator programs",
     ],
   },
   {
     id: 2,
     name: "Priya Sharma",
-    role: "Chief Executive Officer (CEO) Chief Technology Officer (CTO)",
+    role: "Chief Technology Officer (CTO)",
     designation: "Director",
     bio: "Priya is a technology visionary with deep expertise in cloud architecture and modern development practices. She leads our technical strategy and ensures we stay at the forefront of innovation.",
     image:
@@ -28,7 +28,7 @@ export const leadership = [
     email: "priya@aspiron.com",
     expertise: ["Cloud Architecture", "System Design", "DevOps"],
     achievements: [
-      "Architected 3+ cloud-native applications",
+      "Architected 100+ cloud-native applications",
       "AWS Solutions Architect Professional certified",
       "Speaker at tech conferences across India",
     ],
