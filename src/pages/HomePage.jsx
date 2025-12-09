@@ -44,7 +44,7 @@ const HomePage = () => {
           <div>
             <SectionHeader
               subtitle="Who We Are"
-              title="Building Digital Excellence Since 2025"
+              title="Building Digital Excellence Since 2020"
               align="left"
             />
             <p className="text-gray-600 mb-6 leading-relaxed">
