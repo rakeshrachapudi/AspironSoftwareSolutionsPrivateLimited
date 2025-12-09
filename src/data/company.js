@@ -65,28 +65,28 @@ export const company = {
     team: "5+",
     satisfaction: "98%",
   },
-  certifications: [
-    {
-      name: "ISO 9001:2015",
-      description: "Quality Management System",
-      year: "2022",
-    },
-    {
-      name: "ISO 27001:2013",
-      description: "Information Security Management",
-      year: "2023",
-    },
-    {
-      name: "AWS Partner",
-      description: "Amazon Web Services Partner Network",
-      year: "2021",
-    },
-    {
-      name: "Google Cloud Partner",
-      description: "Google Cloud Partner Program",
-      year: "2022",
-    },
-  ],
+  // certifications: [
+  //   {
+  //     name: "ISO 9001:2015",
+  //     description: "Quality Management System",
+  //     year: "2025",
+  //   },
+  //   {
+  //     name: "ISO 27001:2013",
+  //     description: "Information Security Management",
+  //     year: "2025",
+  //   },
+  //   {
+  //     name: "AWS Partner",
+  //     description: "Amazon Web Services Partner Network",
+  //     year: "2025",
+  //   },
+  //   {
+  //     name: "Google Cloud Partner",
+  //     description: "Google Cloud Partner Program",
+  //     year: "2025",
+  //   },
+  // ],
   milestones: [
     {
       year: "2025",
