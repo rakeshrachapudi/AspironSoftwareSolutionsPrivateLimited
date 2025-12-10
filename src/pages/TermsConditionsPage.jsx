@@ -5,7 +5,7 @@ import Card from "../components/ui/Card";
 import company from "@data/company";
 
 const TermsConditionsPage = () => {
-  const lastUpdated = "December 8, 2024";
+  const lastUpdated = "December 3, 2025";
 
   return (
     <>

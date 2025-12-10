@@ -4,7 +4,7 @@ export const leadership = [
     name: "Yadagiri Nomula",
     role: "Founder",
     designation: "Director",
-    bio: "Yadagiri brings over 15 years of experience in software development and business strategy. He founded Aspiron with a vision to deliver world-class IT solutions that transform businesses.",
+    bio: "Yadagiri is the visionary behind Aspiron, bringing over 15 years of experience in technology, business operations, and strategic leadership. He drives the company’s mission, oversees core business decisions, and ensures Aspiron continues delivering high-impact digital solutions for clients across industries.",
     image:
       "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
     linkedin: "#",
@@ -21,7 +21,7 @@ export const leadership = [
     name: "Padmavathi Orria",
     role: "Co Founder",
     designation: "Director",
-    bio: "Padmavathi is a technology visionary with deep expertise in cloud architecture and modern development practices. She leads our technical strategy and ensures we stay at the forefront of innovation.",
+    bio: "Padmavathi leads Aspiron’s innovation and operational strategy. With deep expertise in modern cloud technologies and digital ecosystems, she plays a key role in shaping the company’s service delivery, fostering technical excellence, and driving long-term growth.",
     image:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
     linkedin: "#",
@@ -38,7 +38,7 @@ export const leadership = [
     name: "Rakesh Rachapudi",
     role: "Chief Executive Officer (CEO)",
     designation: "CEO",
-    bio: "Rakesh is passionate about building great teams and fostering a culture of excellence. He ensures Aspiron attracts, develops, and retains top talent in the industry.",
+    bio: "Rakesh oversees Aspiron’s overall vision, culture, and organizational growth. He focuses on strategic planning, client relationships, team development, and expanding the company’s market presence. His leadership ensures that Aspiron remains agile, people-first, and execution-driven.",
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
     linkedin: "https://www.linkedin.com/in/rakesh-rachapudi-4572b22b4/",
@@ -59,7 +59,7 @@ export const leadership = [
     name: "Manideep Karnati",
     role: "Chief Technology Officer (CTO)",
     designation: "CTO",
-    bio: "Manideep specializes in designing scalable enterprise solutions. With expertise in both frontend and backend technologies, he bridges the gap between business needs and technical implementation.",
+    bio: "Manideep drives Aspiron’s technological direction, ensuring the delivery of scalable, secure, and high-performance software solutions. He leads engineering teams, defines architectural standards, and bridges business objectives with technical execution to build reliable digital products.",
     image:
       "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
     linkedin: "https://www.linkedin.com/in/karnati-manideep-015981280/",
@@ -80,20 +80,16 @@ export const leadership = [
     name: "Umama Fatima",
     role: "HR Manager",
     designation: "HR",
-    bio: "Umama specializes in designing scalable enterprise solutions. With expertise in both frontend and backend technologies, she bridges the gap between business needs and technical implementation.",
+    bio: "Umama manages Aspiron’s human resources operations, including hiring, policy development, employee engagement, and workplace culture. She ensures smooth people processes, supports talent development, and fosters an environment where teams can thrive and perform at their best.",
     image:
       "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
     linkedin: "https://www.linkedin.com/in/karnati-manideep-015981280/",
     email: "umama.fatima@aspironsoftwaresolutions.com",
-    expertise: [
-      "Enterprise Architecture",
-      "Full-Stack Development",
-      "Technical Leadership",
-    ],
+    expertise: ["Employee Engagement", "Talent Management", "HR Operations"],
     achievements: [
-      "Led architecture for 30+ enterprise projects",
-      "Expert in microservices and distributed systems",
-      "Published author on system design patterns",
+      "Implemented HR policies improving team workflow",
+      "Led successful onboarding for multiple teams",
+      "Built strong employee engagement programs",
     ],
   },
 ];

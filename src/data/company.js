@@ -69,22 +69,22 @@ export const company = {
     {
       name: "ISO 9001:2015",
       description: "Quality Management System",
-      year: "2022",
+      year: "2025",
     },
     {
       name: "ISO 27001:2013",
       description: "Information Security Management",
-      year: "2023",
+      year: "2025",
     },
     {
       name: "AWS Partner",
       description: "Amazon Web Services Partner Network",
-      year: "2021",
+      year: "2025",
     },
     {
       name: "Google Cloud Partner",
       description: "Google Cloud Partner Program",
-      year: "2022",
+      year: "2025",
     },
   ],
   milestones: [
