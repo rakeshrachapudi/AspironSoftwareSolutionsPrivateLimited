@@ -34,17 +34,15 @@ const HomePage = () => {
         secondaryCta={{ text: "View Our Work", link: "/projects" }}
         variant="gradient"
       />
-
       {/* Stats Section */}
       <StatsSection />
-
       {/* About Preview */}
       <SectionWrapper>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <SectionHeader
               subtitle="Who We Are"
-              title="Building Digital Excellence Since 2020"
+              title="Building Digital Excellence Since 2025"
               align="left"
             />
             <p className="text-gray-600 mb-6 leading-relaxed">
@@ -85,7 +83,6 @@ const HomePage = () => {
           </div>
         </div>
       </SectionWrapper>
-
       {/* Services Section */}
       <SectionWrapper background="secondary">
         <SectionHeader
@@ -104,7 +101,6 @@ const HomePage = () => {
           </Button>
         </div>
       </SectionWrapper>
-
       {/* Featured Product - PropertyDealz */}
       {featuredProject && (
         <SectionWrapper>
@@ -162,7 +158,6 @@ const HomePage = () => {
           </div>
         </SectionWrapper>
       )}
-
       {/* Current Work - Paarani */}
       {paaraniProject && (
         <SectionWrapper background="secondary">
@@ -176,7 +171,6 @@ const HomePage = () => {
           </div>
         </SectionWrapper>
       )}
-
       {/* Certifications Preview */}
       <SectionWrapper>
         <SectionHeader
@@ -197,9 +191,8 @@ const HomePage = () => {
           ))}
         </div>
       </SectionWrapper>
-
-      {/* Testimonials */}
-      <SectionWrapper background="secondary">
+      {/* Testimonials */} {/* FEEDBACK SECTION  */}
+      {/* <SectionWrapper background="secondary">
         <SectionHeader
           subtitle="Client Success Stories"
           title="What Our Clients Say"
@@ -215,8 +208,7 @@ const HomePage = () => {
             View All Testimonials
           </Button>
         </div>
-      </SectionWrapper>
-
+      </SectionWrapper> */}
       {/* CTA Section */}
       <CTASection
         title="Ready to Transform Your Business?"

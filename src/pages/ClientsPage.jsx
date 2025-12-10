@@ -27,10 +27,10 @@ const ClientsPage = () => {
 
       {/* Client Stats */}
       <SectionWrapper>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 ">
           {[
-            { value: "50+", label: "Satisfied Clients" },
-            { value: "100+", label: "Projects Completed" },
+            { value: "2+", label: "Satisfied Clients" },
+            { value: "3+", label: "Projects Completed" },
             { value: "98%", label: "Client Satisfaction" },
             { value: "15+", label: "Industry Verticals" },
           ].map((stat, index) => (
@@ -96,7 +96,8 @@ const ClientsPage = () => {
       )}
 
       {/* All Testimonials */}
-      <SectionWrapper>
+      {/* FEEDBACK SECTION */}
+      {/* <SectionWrapper>
         <SectionHeader
           subtitle="Client Testimonials"
           title="What Our Clients Say"
@@ -107,10 +108,10 @@ const ClientsPage = () => {
             <TestimonialCard key={testimonial.id} testimonial={testimonial} />
           ))}
         </div>
-      </SectionWrapper>
+      </SectionWrapper> */}
 
       {/* Client Projects Portfolio */}
-      <SectionWrapper background="secondary">
+      <SectionWrapper>
         <SectionHeader
           subtitle="Our Work"
           title="Client Success Stories"
@@ -124,7 +125,7 @@ const ClientsPage = () => {
       </SectionWrapper>
 
       {/* Industries We Serve */}
-      <SectionWrapper>
+      <SectionWrapper background="secondary">
         <SectionHeader
           subtitle="Industries"
           title="Diverse Industry Experience"
@@ -137,13 +138,13 @@ const ClientsPage = () => {
             "Healthcare",
             "Finance",
             "Education",
-            "Manufacturing",
+            // "Manufacturing",
             "Logistics",
-            "Hospitality",
+            // "Hospitality",
             "Technology",
             "Professional Services",
-            "Retail",
-            "Government",
+            // "Retail",
+            // "Government",
           ].map((industry) => (
             <Card key={industry} className="text-center" padding="default">
               <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-accent/10 flex items-center justify-center">

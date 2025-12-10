@@ -24,7 +24,7 @@ const AboutPage = () => {
       <HeroSection
         title="About Aspiron"
         subtitle="Our Story"
-        description="Transforming businesses through innovative technology solutions since 2020"
+        description="Transforming businesses through innovative technology solutions since 2025"
         variant="gradient"
       />
 
@@ -37,7 +37,7 @@ const AboutPage = () => {
           />
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-600 leading-relaxed mb-6">
-              Founded in 2020, Aspiron Software Solutions emerged from a simple
+              Founded in 2025, Aspiron Software Solutions emerged from a simple
               yet powerful vision: to empower businesses with technology that
               drives real growth and transformation. What started as a small
               team of passionate developers has grown into a comprehensive IT
