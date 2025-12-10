@@ -31,6 +31,10 @@
   scrollbar-width: thin;
 }
 
+html {
+  zoom: 0.8; /* or 0.9, tweak until it looks normal */
+}
+
 /* GLOBAL BASE STYLES */
 body {
   @apply bg-white text-dark font-body antialiased;
