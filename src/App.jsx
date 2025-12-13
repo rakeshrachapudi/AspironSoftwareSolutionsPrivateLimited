@@ -14,23 +14,38 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsConditionsPage from "./pages/TermsConditionsPage";
 import ProjectsPage from "./pages/ProjectsPage";
 
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+function AppContent() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return (
+    <Layout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/clients" element={<ClientsPage />} />
+        <Route path="/careers" element={<CareersPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms-conditions" element={<TermsConditionsPage />} />
+      </Routes>
+    </Layout>
+  );
+}
+
 function App() {
   return (
     <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/products" element={<ProductsPage />} />{" "}
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/clients" element={<ClientsPage />} />
-          <Route path="/careers" element={<CareersPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-          <Route path="/terms-conditions" element={<TermsConditionsPage />} />
-        </Routes>
-      </Layout>
+      <AppContent />
     </Router>
   );
 }

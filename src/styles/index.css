@@ -6,8 +6,15 @@
 
 /* SCROLLBAR STYLES */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
+}
+
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 ::-webkit-scrollbar-track {
@@ -31,52 +38,119 @@
   scrollbar-width: thin;
 }
 
+/* SMOOTH SCROLL - NO ZOOM! */
 html {
-  zoom: 0.8; /* or 0.9, tweak until it looks normal */
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* GLOBAL BASE STYLES */
 body {
   @apply bg-white text-dark font-body antialiased;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  min-height: 100vh;
 }
 
-/* TYPOGRAPHY */
+/* Prevent zoom on input focus on iOS */
+@supports (-webkit-touch-callout: none) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* TYPOGRAPHY - Mobile First Responsive */
 h1 {
-  @apply font-heading font-semibold text-5xl md:text-6xl lg:text-7xl;
-}
-h2 {
-  @apply font-heading font-semibold text-4xl md:text-5xl lg:text-6xl;
-}
-h3 {
-  @apply font-heading font-semibold text-3xl md:text-4xl;
-}
-h4 {
-  @apply font-heading font-semibold text-2xl md:text-3xl;
-}
-h5 {
-  @apply font-heading font-semibold text-xl md:text-2xl;
-}
-h6 {
-  @apply font-heading font-semibold text-lg md:text-xl;
+  @apply font-heading font-semibold;
+  font-size: clamp(1.75rem, 5vw, 4rem); /* 28px to 64px */
+  line-height: 1.2;
 }
 
-/* BUTTONS */
+h2 {
+  @apply font-heading font-semibold;
+  font-size: clamp(1.5rem, 4vw, 3rem); /* 24px to 48px */
+  line-height: 1.3;
+}
+
+h3 {
+  @apply font-heading font-semibold;
+  font-size: clamp(1.25rem, 3vw, 2.25rem); /* 20px to 36px */
+  line-height: 1.3;
+}
+
+h4 {
+  @apply font-heading font-semibold;
+  font-size: clamp(1.125rem, 2.5vw, 1.875rem); /* 18px to 30px */
+  line-height: 1.4;
+}
+
+h5 {
+  @apply font-heading font-semibold;
+  font-size: clamp(1rem, 2vw, 1.5rem); /* 16px to 24px */
+  line-height: 1.4;
+}
+
+h6 {
+  @apply font-heading font-semibold;
+  font-size: clamp(0.875rem, 1.5vw, 1.25rem); /* 14px to 20px */
+  line-height: 1.5;
+}
+
+p {
+  @apply text-sm sm:text-base md:text-lg leading-relaxed;
+}
+
+/* BUTTONS - Mobile Optimized */
 .btn-primary {
-  @apply inline-flex items-center justify-center px-6 py-3 bg-success text-white font-medium rounded-md shadow-sm hover:bg-accent transition-all duration-300 hover:shadow-lg hover:scale-105 focus:ring-2 ring-success;
+  @apply inline-flex items-center justify-center;
+  @apply px-4 py-2.5 sm:px-6 sm:py-3;
+  @apply bg-success text-white font-medium;
+  @apply text-sm sm:text-base;
+  @apply rounded-md shadow-sm;
+  @apply hover:bg-accent transition-all duration-300;
+  @apply hover:shadow-lg hover:scale-105;
+  @apply focus:ring-2 ring-success focus:outline-none;
+  @apply active:scale-95;
+  min-height: 44px; /* iOS tap target size */
 }
 
 .btn-outline {
-  @apply inline-flex items-center justify-center px-6 py-3 bg-white text-primary border border-secondary-dark font-medium rounded-md hover:border-accent hover:text-accent transition-all duration-300 focus:ring-2 ring-accent;
+  @apply inline-flex items-center justify-center;
+  @apply px-4 py-2.5 sm:px-6 sm:py-3;
+  @apply bg-white text-primary border-2 border-secondary-dark;
+  @apply font-medium text-sm sm:text-base rounded-md;
+  @apply hover:border-accent hover:text-accent;
+  @apply transition-all duration-300;
+  @apply focus:ring-2 ring-accent focus:outline-none;
+  @apply active:scale-95;
+  min-height: 44px; /* iOS tap target size */
 }
 
-/* CARDS */
+/* CARDS - Mobile Responsive */
 .card {
-  @apply bg-white rounded-xl shadow-md hover:shadow-xl p-6 transition-all duration-300;
+  @apply bg-white rounded-lg sm:rounded-xl;
+  @apply shadow-md hover:shadow-xl;
+  @apply p-4 sm:p-6;
+  @apply transition-all duration-300;
 }
 
-/* INPUTS */
+/* INPUTS - Mobile Optimized */
 .input-field {
-  @apply w-full px-4 py-3 border border-secondary-dark rounded-md focus:ring-2 ring-accent transition-all duration-200;
+  @apply w-full;
+  @apply px-3 py-2.5 sm:px-4 sm:py-3;
+  @apply text-base; /* Prevent zoom on iOS */
+  @apply border border-secondary-dark rounded-md;
+  @apply focus:ring-2 ring-accent focus:border-accent;
+  @apply transition-all duration-200;
+  @apply focus:outline-none;
+  min-height: 44px; /* iOS tap target size */
+}
+
+textarea.input-field {
+  min-height: 120px;
+  resize: vertical;
 }
 
 /* ========== UTILITY CLASSES ========== */
@@ -86,7 +160,7 @@ h6 {
   background: linear-gradient(135deg, #0a2540 0%, #0e3254 50%, #2b8ced 100%);
 }
 
-/* Grid Pattern Background */
+/* Grid Pattern Background - Responsive */
 .bg-grid-pattern {
   background-image: linear-gradient(
       0deg,
@@ -112,7 +186,13 @@ h6 {
       transparent 77%,
       transparent
     );
-  background-size: 50px 50px;
+  background-size: 30px 30px;
+}
+
+@media (min-width: 768px) {
+  .bg-grid-pattern {
+    background-size: 50px 50px;
+  }
 }
 
 /* Animation Delay Utilities */
@@ -139,6 +219,11 @@ h6 {
   @apply flex items-center justify-between;
 }
 
+/* Container Utilities */
+.container-responsive {
+  @apply w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+}
+
 /* Text Utilities */
 .text-gradient {
   background: linear-gradient(135deg, #2b8ced, #0a2540);
@@ -154,4 +239,101 @@ h6 {
 
 .shadow-accent-lg {
   box-shadow: 0 20px 50px rgba(43, 140, 237, 0.3);
+}
+
+/* Mobile Safe Area Padding */
+.safe-padding-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Mobile Menu Fixes */
+@media (max-width: 1023px) {
+  body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+/* Responsive Images */
+img {
+  @apply max-w-full h-auto;
+  display: block;
+}
+
+/* Prevent text overflow on mobile */
+.truncate-mobile {
+  @apply truncate sm:whitespace-normal;
+}
+
+/* Mobile-friendly spacing utilities */
+.section-padding {
+  @apply py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24;
+}
+
+.section-padding-sm {
+  @apply py-6 sm:py-8 md:py-12 lg:py-16;
+}
+
+/* Touch-friendly links */
+a,
+button {
+  -webkit-tap-highlight-color: rgba(43, 140, 237, 0.1);
+}
+
+/* Better mobile click targets */
+.mobile-touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Responsive text sizes */
+.text-responsive-sm {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.text-responsive-base {
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+}
+
+.text-responsive-lg {
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile Performance Optimizations */
+@media (max-width: 767px) {
+  * {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  /* Reduce animations on mobile for better performance */
+  .animate-float {
+    animation: none;
+  }
+}
+
+/* Landscape mode fixes for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .section-padding {
+    @apply py-6;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+  }
 }

@@ -1,6 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const isHashLink = (value) =>
+  typeof value === "string" && value.startsWith("#");
+
+const isExternalLink = (value) =>
+  typeof value === "string" &&
+  (value.startsWith("http") ||
+    value.startsWith("mailto:") ||
+    value.startsWith("tel:"));
+
 const Button = ({
   children,
   variant = "primary",
@@ -45,22 +54,42 @@ const Button = ({
     </>
   );
 
-  if (to) {
-    return (
-      <Link to={to} className={classes} {...props}>
-        {content}
-      </Link>
-    );
-  }
+  const link = to || href;
 
-  if (href) {
+  // 1️⃣ Same-page hash scroll (#section)
+  if (isHashLink(link)) {
     return (
-      <a href={href} className={classes} {...props}>
+      <a href={link} className={classes} {...props}>
         {content}
       </a>
     );
   }
 
+  // 2️⃣ External / protocol links
+  if (isExternalLink(link)) {
+    return (
+      <a
+        href={link}
+        className={classes}
+        target="_blank"
+        rel="noopener noreferrer"
+        {...props}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  // 3️⃣ Internal route (React Router)
+  if (link) {
+    return (
+      <Link to={link} className={classes} {...props}>
+        {content}
+      </Link>
+    );
+  }
+
+  // 4️⃣ Normal button
   return (
     <button
       type={type}

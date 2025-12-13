@@ -269,7 +269,9 @@ const CareersPage = () => {
                     </span>
                   </div>
                 </div>
-                <Button variant="primary">Apply Now</Button>
+                <Button to="/contact" variant="primary">
+                  Apply Now
+                </Button>
               </div>
 
               <p className="text-gray-600 mb-4 leading-relaxed">
