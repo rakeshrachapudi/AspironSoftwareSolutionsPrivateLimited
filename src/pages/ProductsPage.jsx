@@ -238,6 +238,7 @@ const ProductsPage = () => {
       </SectionWrapper>
 
       {/* Why Choose Our Products */}
+      {/* Why Choose Our Products */}
       <SectionWrapper background="gradient">
         <SectionHeader
           title="Why Our Products Stand Out"
@@ -264,8 +265,11 @@ const ProductsPage = () => {
                 "Intuitive interfaces that users love, reducing training time and increasing adoption",
             },
           ].map((benefit) => (
-            <Card key={benefit.title} className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
+            <div
+              key={benefit.title}
+              className="bg-white/10 backdrop-blur-sm rounded-lg shadow-md p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
+            >
+              <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
                 <benefit.icon size={32} className="text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">
@@ -274,7 +278,7 @@ const ProductsPage = () => {
               <p className="text-white/80 leading-relaxed">
                 {benefit.description}
               </p>
-            </Card>
+            </div>
           ))}
         </div>
       </SectionWrapper>
