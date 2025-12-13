@@ -29,6 +29,14 @@ export default {
         heading: ["Poppins", "sans-serif"],
         body: ["Inter", "sans-serif"],
       },
+      screens: {
+        xs: "475px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
       spacing: {
         4: "4px",
         8: "8px",
@@ -38,6 +46,7 @@ export default {
         32: "32px",
         48: "48px",
         64: "64px",
+        safe: "env(safe-area-inset-bottom)",
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out",
