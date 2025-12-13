@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import HeroSection from "../components/sections/HeroSection";
 import SectionWrapper from "../components/ui/SectionWrapper";
 import SectionHeader from "../components/ui/SectionHeader";
@@ -9,7 +10,7 @@ import company from "@data/company";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    fullname: "",
     email: "",
     phone: "",
     company: "",
@@ -20,6 +21,7 @@ const ContactPage = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,7 +29,6 @@ const ContactPage = () => {
       ...prev,
       [name]: value,
     }));
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
@@ -39,8 +40,8 @@ const ContactPage = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
+    if (!formData.fullname.trim()) {
+      newErrors.fullname = "Name is required";
     }
 
     if (!formData.email.trim()) {
@@ -66,31 +67,51 @@ const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!validateForm()) {
-      return;
-    }
+    if (!validateForm()) return;
 
     setIsSubmitting(true);
+    setSubmitSuccess(false);
+    setSubmitError(false);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      await emailjs.send(
+        "service_31m8cxi",
+        "template_dz6pi9c",
+        {
+          fullname: formData.fullname,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company || "Not provided",
+          service: formData.service || "Not specified",
+          message: formData.message,
+          time: new Date().toLocaleString("en-IN", {
+            dateStyle: "medium",
+            timeStyle: "short",
+            timeZone: "Asia/Kolkata",
+          }),
+          year: new Date().getFullYear(),
+        },
+        "zTKyg30IyKdzEjA6Y"
+      );
 
-    console.log("Form submitted:", formData);
-    setSubmitSuccess(true);
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      service: "",
-      message: "",
-    });
+      setSubmitSuccess(true);
+      setFormData({
+        fullname: "",
+        email: "",
+        phone: "",
+        company: "",
+        service: "",
+        message: "",
+      });
 
-    setTimeout(() => {
-      setSubmitSuccess(false);
-    }, 5000);
-
-    setIsSubmitting(false);
+      setTimeout(() => setSubmitSuccess(false), 5000);
+    } catch (err) {
+      console.error("EmailJS Error:", err);
+      setSubmitError(true);
+      setTimeout(() => setSubmitError(false), 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -152,11 +173,22 @@ const ContactPage = () => {
               align="left"
             />
 
+            {/* Success Message */}
             {submitSuccess && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
                 <p className="text-green-800 font-medium">
-                  Thank you for reaching out! We'll get back to you within 24
+                  ✓ Thank you for reaching out! We'll get back to you within 24
                   hours.
+                </p>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {submitError && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-red-800 font-medium">
+                  ✗ Failed to send message. Please try again or email us
+                  directly.
                 </p>
               </div>
             )}
@@ -165,24 +197,24 @@ const ContactPage = () => {
               {/* Name */}
               <div>
                 <label
-                  htmlFor="name"
+                  htmlFor="fullname"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
                   Full Name *
                 </label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
+                  id="fullname"
+                  name="fullname"
+                  value={formData.fullname}
                   onChange={handleChange}
                   className={`input-field ${
-                    errors.name ? "border-red-500" : ""
+                    errors.fullname ? "border-red-500" : ""
                   }`}
                   placeholder="John Doe"
                 />
-                {errors.name && (
-                  <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                {errors.fullname && (
+                  <p className="mt-1 text-sm text-red-600">{errors.fullname}</p>
                 )}
               </div>
 
@@ -369,16 +401,6 @@ const ContactPage = () => {
                   <p className="text-gray-600">
                     {company.location.city}, {company.location.state}
                   </p>
-                  {/* In production, embed actual Google Maps */}
-                  {/* <iframe 
-                    src={company.location.mapUrl}
-                    width="100%" 
-                    height="100%" 
-                    style={{border:0}} 
-                    allowFullScreen="" 
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe> */}
                 </div>
               </div>
             </Card>
