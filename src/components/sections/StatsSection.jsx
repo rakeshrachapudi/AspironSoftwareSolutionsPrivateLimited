@@ -7,19 +7,19 @@ const StatsSection = ({ stats }) => {
   const defaultStats = [
     {
       icon: TrendingUp,
-      value: "15+",
+      value: "1+",
       label: "Years Experience",
       color: "from-accent to-success",
     },
     {
       icon: Users,
-      value: "50+",
+      value: "5+",
       label: "Happy Clients",
       color: "from-success to-accent",
     },
     {
       icon: Award,
-      value: "100+",
+      value: "4+",
       label: "Projects Delivered",
       color: "from-accent to-primary",
     },

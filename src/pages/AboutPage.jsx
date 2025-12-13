@@ -32,6 +32,7 @@ const AboutPage = () => {
       <SectionWrapper>
         <div className="max-w-4xl mx-auto">
           <SectionHeader
+            className="text-white"
             subtitle="Our Journey"
             title="Building Digital Excellence"
           />

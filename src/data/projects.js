@@ -42,9 +42,9 @@ export const projects = [
       "Mobile-responsive design",
     ],
     metrics: {
-      users: "10,000+",
-      properties: "5,000+",
-      deals: "500+",
+      users: "100+",
+      properties: "500+",
+      deals: "50+",
       uptime: "99.9%",
     },
     status: "Live",
@@ -86,7 +86,7 @@ export const projects = [
     ],
     metrics: {
       products: "2,000+",
-      orders: "10,000+",
+      orders: "1000+",
       customers: "5,000+",
       revenue: "₹1Cr+",
     },
