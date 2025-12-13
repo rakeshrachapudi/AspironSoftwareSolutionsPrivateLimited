@@ -255,9 +255,9 @@ const ProjectsPage = () => {
       </SectionWrapper>
 
       {/* CTA Section */}
-      <SectionWrapper className="gradient-bg text-white">
+      <SectionWrapper background="gradient">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Start Your Project?
           </h2>
           <p className="text-xl mb-8 text-white/90">
@@ -265,20 +265,13 @@ const ProjectsPage = () => {
             with our expertise
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button
-              to="/contact"
-              variant="primary"
-              size="lg"
-              icon={ArrowRight}
-              className="bg-white text-primary hover:bg-gray-100"
-            >
+            <Button to="/contact" variant="primary" size="lg" icon={ArrowRight}>
               Get Started Today
             </Button>
             <Button
               to="/services"
-              variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white/10"
+              className="bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white/20"
             >
               Learn Our Services
             </Button>

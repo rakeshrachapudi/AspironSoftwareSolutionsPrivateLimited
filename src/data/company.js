@@ -9,7 +9,8 @@ export const company = {
     city: "Hyderabad",
     state: "Telangana",
     country: "India",
-    address: "Plot No. 123, HITEC City, Hyderabad - 500081",
+    address:
+      "Plot No: # 40, 41 & 42, Kondapur, Serilingampalle (M), Hyderabad, Telangana 500084",
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160407077!2d78.24323089999999!3d17.412608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHITEC%20City%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1234567890",
   },
